@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <unordered_map>
+#include <algorithm>
 
 using namespace std;
 #define MAX 26
@@ -51,10 +53,6 @@ int findPair(string str, int start, char *tmp, int n) {
             cnt++;
         }
     }
-    
-
-    //delete[]count1;
-    //delete[]count2;
 
     return cnt;
 }
@@ -81,7 +79,7 @@ int countPairs(string str) {
     return cnt;
 }
 
-void sherlock_anagram() {
+void sherlock_anagram0() {
     int t;
     cin >> t;
 
@@ -89,7 +87,56 @@ void sherlock_anagram() {
         string str;
         cin >> str;
         cout << countPairs(str) << endl;
-    }
-
-    
+    }    
 }
+
+// better solution
+void sherlock_anagram() {
+    int t;
+    cin >> t;
+
+    while (t--) {
+        string str;
+        cin >> str;
+        unordered_map<string, int> ma;  // save key
+        // split sub str
+        int size = str.length();
+        for (int len = 1; len < size; len++) { // allow sub str only, not the whole string
+            for (int pos = 0; pos <= size - len; pos++) {
+                string sub = str.substr(pos, len);
+                sort(sub.begin(), sub.end());
+                ma[sub]++;
+            }
+        }
+        long long cnt = 0;
+        for (auto t : ma) {
+            if (t.second > 1)
+                cnt += (long long)t.second * (t.second - 1) / 2;
+        }
+        cout << cnt << endl;
+    }
+}
+
+/*
+int cases;
+scanf("%d", &cases);
+getchar();
+while (cases--) {
+unordered_map<string, int> mp;
+string s;
+getline(cin, s);
+int n = s.size();
+for (int len = 1; len < n; ++len) {
+for (int i = 0; i <= n - len; ++i) {
+string t = s.substr(i, len);
+sort(t.begin(), t.end());
+mp[t]++;
+}
+}
+long long ans = 0;
+for (auto t : mp) {
+ans += (long long)t.second * (t.second - 1) / 2;
+}
+printf("%lld\n", ans);
+}
+return 0;*/
