@@ -1,0 +1,45 @@
+# java 
+java
+spring
+tomcat
+jms
+mq
+
+# c++
+c++
+boost
+stl
+
+# dot net
+c#
+
+# high level
+python
+scala
+clojure
+ruby
+f#
+
+# database
+nosql
+oracle
+sql server
+sql
+mongodb
+kdb
+
+# big data
+azure
+aws
+hadoop
+spark
+storm
+big data
+
+#mobile
+ios
+android
+
+# misc
+loadrunner
+algorithm
