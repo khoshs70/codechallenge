@@ -1,0 +1,15 @@
+#category, skill1,skill2...
+java,spring,tomcat,j2ee,websphere,jms,WebLogic,Hibernate,JQuery,Servlets,jsp
+c++,boost,stl
+database,nosql,oracle,sql server,sql,sybase,mongodb,kdb,Cassandra,PL/SQL
+#big data,azure,aws,hadoop,spark,storm,machine learning
+#c#,dot net,wpf,wcf
+#python,django
+#scala,play
+#clojure
+#ruby
+#f#
+#mobile,ios,android,swift,object c
+#soa,web service,rest,soap,Messaging,esb,bpm,MQ Series
+#multithreading,low latency,network programming,performance optimization
+# misc,loadrunner,algorithm
