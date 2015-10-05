@@ -11,6 +11,6 @@ clojure
 ruby
 f#
 mobile,ios,android,swift,object c
-soa,web service,restful,soap,Messaging,esb,bpm,MQ Series
+soa,"web service",restful,soap,Messaging,esb,bpm,MQ Series
 multithreading,low latency,network programming,performance optimization
 # misc,loadrunner,algorithm
